@@ -1,111 +1,108 @@
-# UAV NOSE LANDING GEAR ASSEMBLY ✈️
+# UAV NOSE LANDING GEAR ASSEMBLY ✈️🛠️
 
 ## 1. Overview
 
-The **UAV Nose Landing Gear Assembly** project focuses on designing a realistic, fully constrained landing gear system for an unmanned aerial vehicle in **CATIA V5**.  
-The goal is to go beyond aesthetic modelling and build a kinematically correct, clash‑free assembly that can be analysed for motion, clearance, and manufacturability. 🛠️
-
+The **UAV Nose Landing Gear Assembly** project focuses on designing a functional nose gear mechanism for an unmanned aerial vehicle, using only CAD‑based modelling and checks.
+The work covers **part and assembly design, geometric compatibility, and installation space planning** for realistic integration into a UAV fuselage.
 ---
 
 ## 2. Aim 🎯
 
-- Design a **complete UAV nose landing gear assembly** in CATIA V5, reverse‑referencing a real landing gear as the baseline.  
-- Validate **geometric compatibility, clearances, and retraction motion** using DMU Kinematics.  
-- Apply **GD&T and tolerance thinking** to ensure that the design is realistic for manufacturing and assembly, not just for visualization.
+- Design a **nose landing gear assembly** that fits within a defined UAV nose volume and interfaces with the fuselage structure
+- Model all key components in CAD from reference dimensions, ensuring **proper clearances and realistic joint behaviour**
+- Prepare a clean **assembly and drawing package** suitable for manufacturing and documentation.
 
 ---
 
 ## 3. Tech Stack & Tools 🧰
 
-### Software & Modules
+### Software
 
-- **CATIA V5 (V5‑6R2018)**  
-  - Part Design  
-  - Assembly Design  
-  - **DMU Kinematics** (for motion simulation and clash checks)
+- 3D CAD: **CATIA V5 (Part Design, Assembly Design, DMU Kinematics)**
 
-### Core Skills Used
+### Core Skills
 
-- 3D part and assembly modelling from **2D reference drawings** and real‑component photos.  
-- GD&T application for **fits, alignments, and clearances**.  
-- DMU Kinematics setup, including joints, motion drivers, and limits.  
-- Digital Mock‑Up (DMU) for **clash detection and motion envelope validation**.  
+- 3D part modelling from 2D references and real component measurements. 
+- Assembly constraints, motion definition, and clash detection within CATIA V5.
+- 2D drawing creation with dimensions, GDT symbols, and BOM generation.
 
 ---
 
-## 4. Components & Sub‑Assemblies 🧩
+## 4. Architecture & Components 🧩
 
-Typical elements modelled in this project include:
+Typical components modelled in the nose gear assembly:
 
-- **Strut assembly** – main shock‑absorbing member.  
-- **Fork / wheel carrier** – interfaces with the nose wheel and axle.  
-- **Nose wheel** – tyre + rim unit (simplified for CAD, dimensionally realistic).  
-- **Mounting lugs / brackets** – interfaces between the gear and UAV fuselage structure.  
-- **Actuation linkage** – simplified representation of retraction/extension mechanism (links, pivots).  
-- **Fasteners & pins** – modelled as simplified hardware, enough for interference and clearance analysis.
+- **Main strut**  
+  - Primary structural member connecting wheel to fuselage attachment points.
+  - Designed with realistic profiles and mounting features for brackets and steering links.
 
-Each component is parametrically defined where possible so dimensions can be tuned for different UAV sizes without rebuilding the model from scratch. 🔧
+- **Fork / wheel carrier**  
+  - Holds the nose wheel and interfaces with the strut via a pivot or fixed joint.
+  - Includes axle seats and clearance for tyre width.
+
+- **Retracting mechanism interface**  
+  - Mounting features for a future retraction actuator or linkage (modeled as reference interfaces in CAD).
+  - Ensures there is sufficient volume for rotation into the fuselage bay.
+
+- **Mounting brackets & fuselage lugs**  
+  - Attachment lugs designed to connect the gear to the UAV nose structure. 
+  - Hole patterns and fillets added with manufacturability and load paths in mind.
+
+- **Wheel & axle**  
+  - Simplified wheel geometry modelled to correct diameter and width, with an axle passing through the fork.
 
 ---
 
 ## 5. Modelling Workflow 🧱
 
-1. **Reference collection**  
-   - Study real nose landing gear images, reference drawings, and key dimensions for proportions and constraints.  
+1. **Define envelope & constraints**  
+   - Set up a reference **installation space** representing the UAV nose volume. 
+   - Fix key dimensions: wheel size, required ground clearance, and retracted position limits.
 
-2. **Part modelling in CATIA V5**  
-   - Create individual parts (strut, fork, wheel, brackets, pins) using Part Design.  
-   - Apply basic GD&T where relevant: concentricity, perpendicularity, hole positions, etc.  
+2. **Part modelling**  
+   - Create CAD parts for strut, fork, wheel, brackets, and hardware using CATIA V5 Part Design.  
+   - Use parametric dimensions for quick updates to lengths, offsets, and thicknesses.
 
-3. **Assembly construction**  
-   - Assemble components with appropriate constraints (coincidence, offset, angle, axis alignment).  
-   - Define realistic pivot points for steering and retraction motion.  
+3. **Assembly & motion check**  
+   - Assemble all components with appropriate mates (revolute, fixed, sliding as needed) in Assembly Design. 
+   - Use **DMU Kinematics** to define retraction motion and verify that the gear rotates or translates without clashes with the fuselage.
 
-4. **DMU Kinematics setup**  
-   - Convert assembly constraints to kinematic joints.  
-   - Add motion drivers (e.g., rotation for retraction, steering angle).  
-   - Limit motion ranges according to realistic mechanical stops.  
+4. **Clearance & interference control**  
+   - Run clash detection to ensure no interference between gear parts, wheel, and surrounding structure. 
+   - Adjust bracket positions and link lengths in CAD to maintain safe clearances in extended and retracted positions.
 
-5. **Validation**  
-   - Run **retraction and extension simulations**.  
-   - Use **clash detection** to confirm no interference between gear, wheel, and fuselage mounting region during the whole motion. ✅  
+5. **Detailing & documentation**  
+   - Create **2D drawings** for all main parts with dimensions and GDT.[file:344]  
+   - Generate an assembly drawing with section views, ballooned BOM, and basic installation information.
 
 ---
 
-## 6. Key Features & Engineering Highlights 🌟
+## 6. Key Features & CAD Highlights 🌟
 
-- **Reverse‑engineered geometry**  
-  - The landing gear is **reverse-referenced from a real UAV design**, which keeps proportions and interfaces realistic for an aerospace context.  
+- **Realistic integration**  
+  - Geometry and interfaces designed to mirror real-world nose gear layouts, including structural lugs and actuator space.
 
-- **DMU Kinematics motion simulation**  
-  - Full retraction motion simulated inside CATIA V5, verifying that the gear can fold and deploy without collisions.  
-  - Kinematic joints and motions replicate real‑world hinge and actuator behaviour as closely as possible at this level.  
+- **Motion‑validated assembly**  
+  - Retraction and extension motion checked directly in CATIA V5 using kinematic constraints and clash detection.
 
-- **GD&T and tolerance awareness**  
-  - Used GD&T principles to define how parts should align and fit in a real assembly:  
-    - Coaxiality of strut and wheel fork  
-    - Hole positions for brackets & pins  
-    - Clearance around wheel for tyre deflection and steering angle  
+- **Manufacturing‑aware parts**  
+  - Parts designed for machining and fabrication, with appropriate fillets, chamfers, and drilling features.
 
-- **Clash‑free digital mock‑up**  
-  - DMU clash detection used to ensure **zero interference** between components during motion, avoiding late‑stage surprises in a physical prototype.  
-
-- **Presentation‑ready**  
-  - The project is structured and documented so that it can be presented in **academic reviews, portfolio presentations, and interviews** as a clear example of aerospace‑adjacent mechanical design. 🎓
+- **Documentation‑ready**  
+  - Complete set of CAD files, 2D drawings, and BOM makes this project suitable for **portfolio presentation and manufacturing hand‑off**.
 
 ---
 
 ## 7. Possible Extensions 🚀
 
-- Add **shock absorber internals** (spring, damper) and perform a basic kinematic or static load analysis.  
-- Integrate with a **UAV fuselage model** to study installation space, access for maintenance, and structural load paths.  
-- Export key components to FEA software to study **stress in brackets, axles, and strut** under landing loads.  
-
+- Add a detailed **retraction actuator model** (e.g., electric or mechanical linkage) with its mounting brackets.
+- Refine the fuselage cut‑outs and doors around the gear bay for a more aircraft‑like integration. 
+- Produce simple **renders** of extended and retracted positions for portfolio slides and reports.
 ---
 
 ## 8. Author 👨‍💻
 
 **Atharv Nitin Agashe**  
 Mechanical Design Engineer · M.Sc. Mechatronics & Robotics  
-- Email: `atharvagashe962001@gmail.com`  
+- Email: `atharvagashe962001@gmail.com`
 - LinkedIn: [www.linkedin.com/in/atharv-agashe9601](https://www.linkedin.com/in/atharv-agashe9601)
